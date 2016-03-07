@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="douPro:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="douPro.war">
+      <element id="artifact" artifact-name="douPro:war exploded" />
+    </root>
+  </artifact>
+</component>
