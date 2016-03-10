@@ -13,10 +13,23 @@ public class UserServiceImpl implements IUserService {
 	@Resource
 	private IUserDao userDao;
 
+
 	@Override
 	public User getUserById(int userId) {
 		// TODO Auto-generated method stub
 		return this.userDao.selectByPrimaryKey(userId);
 	}
+
+	@Override
+	public int inserUser(User user) {
+		 return this.userDao.insert(user);
+
+	}
+
+	@Override
+	public int insertSelective(User record) {
+		return this.userDao.insertSelective(record);
+	}
+
 
 }

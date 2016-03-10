@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    
+
     @Resource()
     private IUserService userService;
 
@@ -35,18 +35,17 @@ public class UserController {
         return "user/getInfo";
     }
 
-
     @GET
     @RequestMapping("insertUserInfo.do")
     public String inserUserInfo() {
 
         User user = new User();
-        user.setId(1);
+//        user.setId(1);
         user.setAge(20);
         user.setUserName("huhu");
         user.setPassword("123");
 //		添加用户的信息
-        this.userService.inserUser(user);
+        this.userService.insertSelective(user);
 
         return "user/getInfo";
 
