@@ -18,7 +18,6 @@ public class UserController {
     @Resource()
     private IUserService userService;
 
-
     @RequestMapping("/showUser")
     public String toIndex(HttpServletRequest request, Model model) {
         System.out.println("UserController toIndex: ");
@@ -32,6 +31,9 @@ public class UserController {
     @RequestMapping("/getInfo.do")
     public String getUserInfo() {
         System.out.println("UserController getUserInfo: ");
+        User user = this.userService.getUserById(1);
+        System.out.println("username:" + user.getUserName());
+        System.out.println("password:" + user.getPassword());
         return "user/getInfo";
     }
 
@@ -46,7 +48,6 @@ public class UserController {
         user.setPassword("123");
 //		添加用户的信息
         this.userService.insertSelective(user);
-
         return "user/getInfo";
 
     }

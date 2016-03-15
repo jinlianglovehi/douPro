@@ -5,47 +5,39 @@
 <generatorConfiguration>
 
     <!-- !!!! Driver Class Path !!!! -->
-    <classPathEntry
-            location="//Users//jinliang//.m2//repository//mysql//mysql-connector-java//5.1.30//mysql-connector-java-5.1.30.jar"/>
+    <classPathEntry location=""/>
 
     <context id="context" targetRuntime="MyBatis3">
-        <property name="javaFileEncoding" value="utf-8"/>
         <commentGenerator>
             <property name="suppressAllComments" value="false"/>
             <property name="suppressDate" value="true"/>
         </commentGenerator>
 
         <!-- !!!! Database Configurations !!!! -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/dou_pro"
-                        userId="root" password=""/>
+        <jdbcConnection driverClass="" connectionURL="" userId="" password=""/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- !!!! Model Configurations !!!! -->
-        <javaModelGenerator targetPackage="com.doudou.cn.test.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- !!!! Mapper XML Configurations !!!! -->
-        <sqlMapGenerator targetPackage="com.doudou.cn.test.mapping" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
         <!-- !!!! Mapper Interface Configurations !!!! -->
-        <javaClientGenerator targetPackage="com.doudou.cn.test.dao" targetProject="src/main/java"
-                             type="XMLMAPPER">
+        <javaClientGenerator targetPackage="" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="user_t" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableUpdateByExample="false"
-               schema="User"
-        >
-        </table>
+        <table tableName="" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>
